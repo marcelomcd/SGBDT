@@ -1,0 +1,835 @@
+(
+( |-----------------------------------------------------------------------------------------------------------|
+( |                                                                                                           |
+( |  ARQUIVO:       DMAQ.STB                                                                                  |
+( |  FORMATO:       PROGRAMA ANATEM 12.06.00 (JUL/24)                                                         |
+( |                 PROGRAMA ANAREDE 11.07.02 (DEZ/23)                                                        |
+( |  VERSAO:        MAR/2024 R1                                                                               |
+( |  EMISSAO:       ONS - DPL/EG/EGE/EGS/EGN                                                                  |
+( |  COMPONENTES:   Associação de modelos de máquinas e controladores                                         |
+( |                                                                                                           |
+( |                                                                                                           |
+( |------------------------------------------ CONTATOS -------------------------------------------------------|
+( |                                                                                                           |
+( |  Equipe BD Anatem - ONS        -    bdanatem@ons.org.br                                                   |
+( |                                                                                                           |
+( |-----------------------------------------------------------------------------------------------------------|
+( |  SITE - https://sintegre.ons.org.br/sites/8/93/paginas/servicos/produtos.aspx                             |
+( |-----------------------------------------------------------------------------------------------------------|
+( |  NOTA: Todas as informações aqui apresentadas foram fornecidas oficialmente pelos Agentes                 |
+( |        responsáveis, como sendo representativas dos equipamentos instalados em campo.                     |
+( |-----------------------------------------------------------------------------------------------------------|
+(
+(
+(
+DMAQ DGEI
+(
+( |-----------------------------------------------------------------------------------------------------------|
+( |  BARRAS INFINITAS                                                                                         |
+( |-----------------------------------------------------------------------------------------------------------|
+(
+( Nb)   Gr (P) (Q) Uni ( Mg ) ( Mt )u( Mv )u( Me )u(Xvd)(Nbc)
+(....... HVDC CCC Garabi - Barra Infinita 50 Hz para inversores fictícios
+ 1040   10                 97
+(....... HVDC Carga da Alumar
+ 8004   10                 98
+(....... C.F. Melo - Barra Infinita 50 Hz do lado do Uruguai
+(10641   10                 97
+(
+( |-----------------------------------------------------------------------------------------------------------|
+( |  UHE                                                                                                      |
+( |-----------------------------------------------------------------------------------------------------------|
+(
+( Nb)   Gr (P) (Q) Uni ( Mg ) ( Mt )u( Mv )u( Me )u(Xvd)(Nbc)
+(....... UHE Emborcação
+  300   10                300    300u   340u   370u
+ 9034   10                300   9034u
+(....... UHE Estreito
+ 5595   10               5400   5400u
+(....... UHE Curua-Una
+44695   10               1321   1321u  1351u
+44696   10               1321   1322u  1352u
+44697   10               1323   1323u  1353u
+45197   10               1324   1324u  1354u  1384u
+(....... UHE Sobradinho
+ 6294   10               1223   1223u  1263u
+ 6295   10               1223   1224u
+(....... UHE Guilman Amorim
+  306   10                314    314u          384u
+(....... UHE Paulo Afonso I
+ 5006   10               1200   1200u  1240u
+(....... UHE Mascarenhas
+ 2600   10               1100   1100u  1140u  1170u
+ 2600   20               1101   1101u  1141u  1171u
+(....... UHE Dardanelos - UG01 a UG04 (4890) UG05 (4891)
+ 4890   10               5300   5300u  5340u  5370u
+ 4891   10               5301   5301u  5341u  5371u
+(....... UHE Santa Branca (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+(  296   10               296
+(....... UHE Jurumirim
+  506   10                505    505u   545u   575u
+(....... UHE Promissão
+  519   10                519    518u   558u
+(....... UHE Sao Salvador
+ 3968   10                822    822u   861u   886u
+(....... UHE Irape
+ 4064   10                320    320u   360u   390u
+ 9041   10                320   9041u
+(....... UHE Nilo Pecanha
+44323   10                200    200u   240u   270u
+  250   10                201    201u   241u   271u
+(....... UHE Paulo Afonso II -
+ 5009   10               1202   1202u  1242u
+ 5010   10               1202   1203u  1243u
+ 5011   10               1202   1204u  1244u
+ 5012   10               1205   1205u  1245u
+ 5013   10               1205   1206u  1246u
+ 5014   10               1205   1207u  1247u
+(....... UHE Monte Claro
+ 1159   10               3500   3500u  3540u  3570u
+(....... UHE Capivara
+  507   10                506    506u   546u   576u
+(....... UHE Sao Roque
+ 9740   10               6400   6400u  6440u
+(....... UHE Ilha dos Pombos
+  257   10                206    206u   246u
+  257   20                207    207u   247u
+  257   30                208    208u   248u
+  257   40                209    209u   249u
+(....... PCH Maua (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+(  984   10               1016
+(....... UHE Coaracy Nunes - UG01 e UG02 (8224) E UG3 (8225)
+ 8224   10               7000   7000u  7040u  7070u
+ 8225   10               7001   7001u  7041u  7071u
+(....... UHE Mascarenhas de Moraes - A (22) B (24)
+   22   10                111    111u   151u   181u
+   24   10                112    112u   152u   182u
+(....... UHE Manso
+   21   10                128    128u   159u   189u
+(....... UHE Fundao
+ 2475   10                711    711u   751u   781u
+(....... UHE Boa Esperança
+ 5520   10               1226   1226u  1266u
+ 5522   10               1228   1228u  1268u
+ 5523   10               1228   1229u
+(....... UHE Pedra do Cavalo
+ 5888   10               3300   3300u         3370u
+(....... UHE Henry Borden
+ 7451   10                400   7451u  7471u
+ 7461   10                400   7461u
+ 7452   10                402   7452u  7472u
+ 7462   10                402   7462u
+ 7453   10                401   7453u  7473u
+ 7463   10                401   7463u
+ 7454   10                403   7454u  7474u
+ 7464   10                403   7464u
+ 7458   10                404   7458u  7478u
+ 7468   10                404   7468u
+ 7459   10                405   7459u  7479u
+ 7469   10                405   7469u
+(....... UHE Euclides da Cunha
+  522   10                522    521u   561u
+(....... UHE Chavantes
+  514   10                514    513u   553u
+(....... UHE JURUENA
+46543   10                829    829u
+(....... UHE Sa Carvalho (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+( UG1 E UG2 (GRUPO 10);  UG3 (GRUPO 20)-  UG4 (GRUPO 30)
+( 1599   10               1097
+( 1599   20               1098
+( 1599   30               1099
+(....... UHE Sobragi (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+(  317   10               1314
+(....... UHE Rondon II
+ 6831   10               4706   4706u         4776u
+(....... UHE Nova Ponte
+  302   10                303    303u   343u   373u
+ 9035   10                303   9035u
+(....... UHE Jaguara
+  301   10                302    302u   342u   372u
+(....... UHE Ita
+  904   10                812    812u   852u   882u
+  905   10                812    813u
+(....... UHE Corumbá III (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+(3642   10               3642
+(....... UHE Simplicio
+ 9500   10               2400   2400u  2440u  2470u
+(....... UHE SUICA (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+( 2601   10               1102
+(....... UHE Corumba IV
+ 3641   10               4300   4300u  4340u  4370u
+(....... UHE Samuel
+ 6891   10               4705   4705u  4745u  4775u
+(....... UHE Salto Grande - SP
+  512   10                512    511u   551u
+(....... UHE Alzir Santos - Monjolinho
+  931   10                823    823u   862u   887u
+(....... UHE Luiz Gonzaga - UG1,2,3 (5051); UG4,5,6 (5054)
+ 5051   10               1217   1217u  1257u  1272u
+ 5054   10               1219   1219u  1259u  1273u
+(....... UHE Serra da Mesa
+   36   10                117    117u   157u   187u
+   37   10                117    118u
+(....... UHE Barra Bonita
+  516   10                516    515u   555u
+(....... UHE Santo Antonio do Jari
+ 8269   10               7004   7004u  7044u
+(....... UHE Maua
+  983   10               1015   1015u  1045u  1075u
+(....... UHE Sao Simão
+  303   10                304    304u   344u   374u
+(....... UHE Gov. Bento Munhoz - Foz do Areia (gerador e cs)
+  800   10                700    700u   740u   770u
+  801   10                700    701u
+(....... UHE Pimental
+ 6555   10               6724   6221u
+ 6556   10               6724   6222u
+ 6559   10               6724   6223u
+(....... UHE Paulo Afonso IV  - Gerador e CS
+ 5022   10               1211   1211u  1251u  1271u
+47231   10               1211   1411u
+(....... UHE Paraibuna
+  526   10                526    524u   564u   589u
+(....... UHE Corumba
+   35   10                116    116u   156u   186u
+(....... UHE Limoeiro
+  523   10                523    522u   562u
+(....... UHE Caconde
+  521   10                521    520u   560u
+(....... UHE D. Francisca
+ 1176   10               1009   1009u  1049u  1079u
+ 1177   10               1009   1012u
+(....... UHE Salto Santiago
+  925   20               1810   1810u  1850u  1880u
+  926   20               1810   1811u
+(....... UHE Governador Jose Richa - Salto Caxias
+  808   10                706    706u   746u   776u
+  809   10                706    707u
+(....... UHE Jauru
+ 4809   10               1404   1404u  1444u  1474u
+(....... UHE Baixo Iguacu
+ 9356   10               6500   6500u  6540u  6570u
+(....... UHE 14 Julho
+ 1168   10               3502   3502u  3542u  3572u
+ 6419   10               1300   1300u         1370u
+ 6420   10               1301   1301u         1371u
+ 6421   10               1301   1302u
+ 6422   10               1303   1303u         1372u
+ 6423   10               1303   1304u
+ 6424   10               1305   1305u
+ 6425   10               1311   1311u
+(....... UHE Jaguari
+  525   10                525    523u   563u
+(....... UHE Santo Antonio - Margem Direita - CF1: 08 UG - 5 pas
+(     -> Grupo 10 - RT Andritz / RV Voith
+(     -> Grupo 20 - RT Alstom  / RV Alstom
+ 7050   10               6000   6000u  6040u
+ 7050   20               6000   6001u  6041u
+(....... UHE Santo Antonio - Margem Esquerda - CF2 e CF3: 16 UG - 4 pas / 08 UG - 5 pas
+(     -> Grupo 10 - RT Andritz / RV Voith
+(     -> Grupo 20 - RT Alstom  / RV Alstom
+ 7064   10               6000   6002u  6042u
+ 7064   20               6000   6003u  6043u
+(....... UHE Santo Antonio - Leito do Rio - CF4: 08 UG - 4 pas / 04 UG - 5 pas
+(     -> Grupo 10 - RT Andritz / RV Voith
+(     -> Grupo 20 - RT Alstom  / RV Alstom
+ 7062   10               6000   6004u  6044u
+ 7062   20               6000   6005u  6045u
+(....... UHE Santo Antonio - Adicionais: TRUG4547
+(     -> Grupo 10 - UG45 - RT Andritz / RV Voith
+(     -> Grupo 20 - UG46 - RT Andritz / RV Voith
+(     -> Grupo 30 - UG47 - RT Andritz / RV Alstom
+ 6888   10               6000   6006u  6046u
+ 6888   20               6000   6007u  6047u
+ 6888   30               6000   6008u  6048u
+(....... UHE Santo Antonio - Adicionais: TRUG4850
+(     -> Grupo 10 - UG48 - RT Andritz / RV Voith
+(     -> Grupo 20 - UG49 - RT Alstom  / RV Voith
+(     -> Grupo 30 - UG50 - RT Alstom  / RV Alstom
+ 6892   10               6000   6009u  6049u
+ 6892   20               6000   6010u  6050u
+ 6892   30               6000   6011u  6051u
+(....... UHE Itutinga (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+( 1501   10               1510
+(....... UHE Miranda
+  312   10                315    315u   355u
+(....... UHE Pereira Passos
+  255   10                205    205u   245u   275u
+(....... UHE Funil (RJ)
+   14   10                105    105u   145u
+(....... UHE Ferreira Gomes
+ 8279   10               7005   7005u  7045u  7075u
+(....... UHE Eng. Jose Luiz Muller de Godoy Pereira - Foz do Rio Claro
+ 9447   10               5724   5724u         5784u
+(....... UHE Campos Novos
+ 1157   10               4100   4100u  4140u  4170u
+ 1158   10               4100   4101u
+(....... UHE Taquaruçu
+  513   10                513    512u   552u   582u
+(....... UHE Santa Clara
+ 1511   10               3700   3700u  3740u  3770u
+(....... UHE Retiro Baixo
+ 4068   10               4900   4900u  4940u  4970u
+(....... UHE Itaúba
+ 1155   10               1000   1000u  1040u  1070u
+ 1156   10               1000   1001u
+(....... UHE Santa Clara - PR
+  806   10                710    710u   750u   780u
+(....... UHE Porto Colombia
+   28   10                113    113u   153u
+(....... UHE Itiquira - M1(4523) e M2(4525)
+ 4523   10               2200   2200u  2240u  2270u
+ 4525   10               2201   2201u  2241u  2271u
+(....... UHE Salto do Rio Verdinho
+ 9443   10               5723   5723u         5783u
+(....... UHE Jupia - 440 kV (502) 138 KV (503)
+  502   10                502    502u   542u
+  502   20                502    503u   543u   573u
+  503   10                502    504u   544u   574u
+(....... UHE Apolonio Sales
+ 5030   10               1213   1213u  1253u
+ 5032   10               1213   1215u  1255u
+(....... UHE Furnas
+   16   10                106    106u   146u   176u
+   17   10                106    107u
+(....... UHE Belo Monte
+ 6729   10               8101  80501u 80541u 80571u
+ 6729   20               8102  80502u 80542u 80572u
+ 6729   30               8103  80503u 80543u 80573u
+ 6728   10               8103  80521u
+(....... UHE Três Marias
+  304   10                305    305u   345u   375u
+(....... UHE Ourinhos
+ 2031   10               3301   3301u
+(....... UHE Três Irmaos
+  520   10                520    519u   559u   587u
+(....... UHE Passo Sao Joao
+ 9218   10               1014   1014u  1044u  1074u
+(....... UHE Salto Osorio - UG1-UG4 (919-920) UG5-UG6(921-922)
+  919   10                806    806u   846u   876u
+  920   10                806    807u
+  921   10                808    808u   848u
+  922   10                808    809u
+(....... UHE Baguari
+ 1496   10                322    322u   362u   392u
+(....... UHE Itumbiara
+   18   10                108    108u   148u   178u
+   19   10                108    109u
+(....... UHE Porto Estrela
+ 1594   10                317    317u   357u
+(....... UHE Rosal (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+( 2696   10               2696
+( 2696   20               2697
+(....... UHE Porto Primavera
+  510   10                510    509u   549u   579u
+(....... UHE Cacu
+ 9448   10               5720   5720u  5760u  5780u
+(....... UHE Serra do Facao
+ 3014   10               5800   5800u  5840u
+(....... UHE Cana Brava
+ 3964   10                814    814u   854u   884u
+   23   10                814    816u
+(....... UHE Salto
+ 9442   10               5721   5721u         5781u
+(....... UHE Garibaldi
+ 9735   10               1017   1017u  1047u
+(....... UHE Cachoeira Dourada
+( 11 UG01-UG02 (750); 13 UG03-UG04 (751); 13A UG05 (752)
+( 13N UG06-UG07-UG08 (753); 13K UG09-UG10 (754)
+  750   10                600    600u   640u
+  751   10                601    601u   641u
+  752   10                602    602u   642u   672u
+  753   10                603    603u   643u   673u
+  754   10                604    604u   644u   674u
+(....... UHE Nova Avanhandava
+  518   10                518    517u          585u
+(....... UHE Aimores
+ 4042   10                321    321u   361u   391u
+(
+(....... UHE Foz do Chapeco
+ 1070   10               5600   5600u  5640u  5670u
+ 1073   10               5600   5601u
+(....... UHE Governador Parigot de Souza (RV RETIRADO PROVISORIAMENTE - REG. PRIM DESABILITADA EM CAMPO)
+  804   10                702    702u
+  805   10                702    703u
+(....... UHE Camargos (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+(45363   10               1511
+(....... UHE Ponte de Pedra
+ 4520   10               3400   3400u  3440u  3470u
+(....... UHE Fontes Nova
+44322   10                202    202u   242u   272u
+  253   10                203    203u   243u   273u
+(....... UHE Candonga
+ 1559   10               3800   3800u  3840u  3870u
+(....... UHE Funil (MG)
+ 4044   10                318    318u   358u   388u
+(....... UHE Sao Manoel
+ 4489   10               8885   8885u  8845u
+(....... UHE Canoas - I (508) II (509)
+  508   10                507    507u   547u   577u
+  509   10                508    508u   548u   578u
+(....... UHE Picada
+ 4016   10               3302   3302u  3342u  3372u
+(....... UHE Salto Pilao
+ 2863   10                824    824u   863u   888u
+(....... UHE Balbina
+ 8597   10               7104   7104u  7144u
+(....... UHE Igarapava
+  343   10                316    316u   356u   386u
+(....... UHE Barra Grande
+ 1150   10               3200   3200u  3240u  3270u
+ 1151   10               3200   3201u
+(....... UHE Passo Real
+ 1175   10               1008   1008u  1048u  1078u
+(....... UHE Amador Aguiar - 1 e 2
+ 4052   10               4000   4000u  4040u  4070u
+ 4054   10               4001   4001u  4041u  4071u
+(....... UHE Piraju
+  614   10               2500   2500u         2570u
+(....... UHE Jacui
+ 1162   10               1002   1002u  1042u  1072u
+(....... UHE Queimado
+ 4039   10                319    319u   359u   389u
+(....... UHE Ilha Solteira
+  501   10                501    501u   541u   571u
+  531   10                501    531u
+(....... UHE Machadinho
+  915   10                815    815u   855u   885u
+  916   10                815    821u
+(....... UHE Xingo - Gerador e CS
+ 5061   10               1221   1221u  1261u  1274u
+47215   10               1221   1421u
+(....... UHE Sao Jose
+ 9220   10               1013   1013u  1043u  1073u
+(....... UHE Lajeado
+ 7206   10               1500   1500u         1570u
+(....... UHE Paulo Afonso III - UG1 E UG3 (5015); UG2 E UG4 (5016)
+ 5015   10               1208   1208u  1248u
+ 5016   10               1208   1210u  1250u
+(....... UHE Marimbondo
+   20   10                110    110u   150u   180u
+(....... UHE Luiz Carlos Barreto
+   12   10                103    103u   143u   173u
+   13   10                103    104u
+(....... UHE Itaipu - 50 Hz (110) 60 Hz (1107)
+ 1100   10                900    900u   940u
+ 1107   10                901    901u   941u   971u
+(....... UHE Espora
+ 3744   10               4400   4400u  4440u  4470u
+(....... UHE Governador Ney Braga - Segredo
+  810   10                704    704u   744u   774u
+  811   10                704    705u
+(....... UHE Batalha
+ 9446   10                119    119u   163u   183u
+(....... UHE Bariri
+  515   10                515    514u   554u
+  524   10                515    529u   569u
+(....... UHE Colider
+ 4462   10               6300   6300u  6340u  6370u
+(....... UHE Quebra-Queixo
+ 2836   10               3000   3000u  3040u  3070u
+(....... UHE Castro Alves
+ 1166   10               3501   3501u  3541u  3571u
+(....... UHE Jirau -> Utilizar o PSS (CDUs 6170 e 6171) na presença do TF13
+ 7051   10               6100   6100u  6140u
+ 7061   10               6101   6101u  6141u
+(....... UHE Volta Grande
+  305   10                306    306u   346u
+ 9037   10                306   9037u
+(....... UHE Teles Pires
+ 4492   10               6301   6301u  6341u  6371u
+(....... UHE Rosana
+  511   10                511    510u   550u   580u
+(....... UHE Passo Fundo
+  917   10                804    804u   844u   874u
+  918   10                804    805u
+(....... UHE Cachoeira Caldeirao
+ 8276   10               6600   7006u  7046u
+(....... UHE Guapore
+ 4804   10               1405   1405u  1445u  1475u
+(....... UHE Itapebi
+ 5975   10               2100   2100u  2140u  2170u
+(....... UHE Salto Grande (MG) - (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+( UG1 E UG2 (GRUPO 10)-  UG3 E UG4 (GRUPO 20)
+( 1502   10               1502
+( 1502   20               1503
+(....... UHE Sinop
+ 4478   10               8881   8881u  8886u
+(....... UHE Ibitinga
+  517   10                517    516u   556u
+(....... UHE Enerpeixe
+ 7110   10               3900   3900u  3940u  3970u
+(....... UHE Agua Vermelha
+  500   10                500    500u   540u   570u
+(....... UHE Barra dos Coqueiros
+ 9449   10               5722   5722u  5762u  5782u
+(
+( |-----------------------------------------------------------------------------------------------------------|
+( |  UTE                                                                                                      |
+( |-----------------------------------------------------------------------------------------------------------|
+(
+( Nb)   Gr (P) (Q) Uni ( Mg ) ( Mt )u( Mv )u( Me )u(Xvd)(Nbc)
+(....... UTE Porto Pecem I e II
+ 5658   10               4813   4813u         4873u
+ 5659   10               4813   4814u  4854u  4874u
+(....... UTE CSP - Companhia Siderúrgica do Pecem - TG1eTG2(5746); TRT(5799)
+ 5746   10               5910   5910u  5940u  5970u
+ 5799   10               5911   5911u  5941u
+(....... UTE Canoas - Gas(1152);Vapor(1169)
+ 1152   10               2600   2600u  2640u  2670u
+ 1169   10               2609   2609u         2679u
+(....... UTE do Atlântica - TKCSA - Gas(9600;9615);Vapor(9603)
+ 9600   10               5000   5000u         5070u
+ 9615   10               5000   5002u         5072u
+ 9603   10               5001   5001u         5071u
+(....... UTE Ibirite - Gas(1585);Vapor(1586)
+ 1585   10               2601   2601u  2641u  2671u
+ 1586   10               2602   2602u         2672u
+(....... UTE Boa Vista
+ 9453   10               5703   5703u
+(....... UTE Termobahia (Celso Furtado)
+ 5827   10               2300   2300u         2370u
+(....... UTE PROSPERIDADE I e II (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+( 6104   10               1021
+( 8421   10               6828
+(....... UTE Nova Piratininga - Gas(405)(406)
+  405   10                406    406u          476u
+  406   10                406    407u          477u
+(....... UTE Potiguar 1
+ 5240   10               4800   4800u
+(....... UTE Potiguar 3
+ 5242   10               4801   4801u
+(....... UTE Maua III  - Gas(8535);Vapor(8538)
+ 8535   10               3687   3687u  3667u  3697u
+ 8538   10               3688   3688u  3668u  3698u
+(....... UTE Araucaria - Gas(802);Vapor(803)
+  802   10                708    708u   748u   778u
+  803   10                709    709u          779u
+(....... UTE Eldorado
+ 9561   10               5205   5205u
+ 9561   20               5206   5206u
+ 9561   30               5207   5207u
+(....... UTE Termoceara
+ 5660   10               2700   2700u  2740u  2770u
+(....... UTE Juiz de Fora - A (4100); B (4180)
+ 4100   10               3600   3600u         3670u
+ 4180   10               3600   3601u         3671u
+(....... UTE GNA I - Gas(53) e Vapor(54)
+   53   10               6820   6820u  6860u  6880u
+   54   10               6821   6821u         6881u
+(....... UTE Caçu I
+ 9451   10               5700   5700u
+ 9451   20               5701   5701u
+(....... UTE Termonordeste
+ 5219   10               7803   7803u
+(....... UTE Pampa Sul
+  998   10               6909   6909u  6949u  6979u
+(....... UTE Ipaussu Bioenergia
+( 9115   10              9115
+(....... UTE TermoPernambuco - Gas(5151);Vapor(5154)
+ 5151   10               3100   3100u  3140u  3170u
+ 5154   10               3101   3101u         3171u
+(....... UTE Geramar I - Tocantinopolis
+ 5557   10               4806   4806u
+ 5558   10               4806   4807u
+(....... UTE Geramar II - Nova Olinda
+ 6447   10               4806   4808u
+ 6448   10               4806   4809u
+(....... UTE Cubatao - Gas(9100);Vapor(9101)
+ 9100   10               2607   2607u  2647u
+ 9101   10               2608   2608u
+(....... UTE Termorio
+ 4203   10               1900   1900u         1970u
+44324   10               1900   1901u         1971u
+ 4204   10               1902   1902u         1972u
+ 4206   10               1900   1903u         1973u
+44325   10               1900   1904u         1974u
+ 4205   10               1905   1905u         1975u
+ 4207   10               1900   1906u         1976u
+44326   10               1900   1907u         1977u
+ 4208   10               1908   1908u         1978u
+(....... UTE Quirinopolis
+ 9452   10               5702   5702u
+(....... UTE Uruguaiana - Gas(1164);Vapor(1165)
+ 1164   10               1010   1010u  1050u  1080u
+ 1165   10               1011   1011u         1081u
+(....... UTE Tres Lagoas - Gas(4300);Vapor(3524) - Gas(4301);Vapor(3525)
+ 4300   10               2603   2603u  2643u  2673u
+ 3524   10               2604   2604u         2674u
+ 4301   10               2603   2605u  2645u  2675u
+ 3525   10               2604   2606u         2676u
+(....... UTE NOVO TEMPO BARCARENA
+ 8423   10               6826   6826u         6886u
+(....... UTE Suape II
+ 6021   10               6021   6021u
+ 6022   10               6021   6031u
+ 6023   10               6021   6941u
+ 6024   10               6021   6951u
+ 6025   10               6021   6961u
+ 6026   10               6021   6971u
+(....... UTE Bracell
+ 7656   10               6827   6827u         6887u      7655
+(....... UTE Manauara
+ 8609   10               7109   7109u  7149u
+(....... UTE MARLIM AZUL
+44329   10               6824   6824u
+(....... UTE Campina Grande
+ 5220   10               9325   9325u
+(....... UTE CTE II - CSN
+  269   10                210    210u   250u
+(....... UTE Piratininga 14.4
+(  404   10                409
+(....... UTE Piratininga 13.8
+(  403   10                408
+(....... UTE Arembepe
+ 5762   10               4804   4804u
+(....... UTE Willian Arjona
+  927   10               830     830u
+  928   10               830     831u
+  929   10               832     832u
+  923   10               832     833u
+  924   10               834     834u
+(....... UTE Porto de Sergipe 3 - Gas(5700);Vapor(5800)
+ 5700   10               6913   6913u  6943u  6973u
+ 5800   10               6914   6914u         6974u
+(....... UTE Vale do Acu
+ 5466   10               1803   1800u         1870u
+(....... UTE Baixada Fluminense - Gas(9627);Vapor(9628)
+ 9627   10               2687   2687u  2667u  2697u
+ 9628   10               2688   2688u         2698u
+(....... UTE Porto de Itaqui
+ 5609   10               4812   4812u  4852u  4872u
+(....... UTE Termoparaiba
+ 5218   10               7804   7804u
+(....... UTE Pernambuco III
+ 5178   10               4818   4818u
+(....... UTE Termomacae
+ 3977   10               1700   1700u
+ 3978   10               1701   1701u
+(....... UTE Caarapo
+ 1873   10               5200   5200u
+(....... UTE Suzano
+ 5698   10               6200   6200u         6270u
+(....... UTE Viana I
+45976   10               5101   5101u
+45977   10               5101   5102u
+45979   10               5101   5103u
+45980   10               5101   5104u
+(....... UTE Viana I - expansao
+45981   10               5105   5105u
+45982   10               5105   5106u
+45983   10               5105   5107u
+45984   10               5105   5108u
+(....... UTE Global I e II
+ 5820   10               4810   4810u
+ 5823   10               4810   4811u
+(....... UTE Refinaria Abreu e Lima - RNEST
+45640   10               2610   2610u
+(....... UTE Louis Dreyfus
+ 1888   10               5202   5202u
+ 1888   20               5203   5203u
+(....... UTE GNA PORTO DO ACU
+44327   10               6822   6822u         6882u
+44410   10               6823   6823u         6883u
+(....... UTE Seropedica (Eletrobolt)
+ 3974   10               1600   1600u
+44892   10               1600   1602u
+(....... UTE SUZANO - RRP1
+10408   10               1020   1020u
+(....... UTE Termocabo
+ 5134   10               9100   9100u
+(....... UTE Cuiaba - Gas(4596);Vapor(4597)
+ 4596   10               1400   1400u  1440u  1470u
+ 4597   10               1401   1401u         1471u
+(....... UTE Jaraqui - 23 x Motores GE de 4.5 MVA   (GÁS)
+ 8612   10               7112   7112u  7152u
+ 8616   10               7112   7113u  7153u
+(....... UTE Jaraqui - 1 x Motor GE de 9.32 MVA     (ÓLEO)
+( 8616   20               7117    594u
+(....... UTE Jaraqui - 2 x Motores GE de 23.04 MVA  (ÓLEO)
+( 8612   20               7116    595u
+(....... UTE Jaraqui - 2 x Motores GE de 23.04 MVA  (ÓLEO) 
+( 8616   30               7116    596u
+(....... UTE Tambaqui - 23 x Motores GE de 4.5 MVA  (GÁS)  
+ 8615   10               7114   7114u  7154u
+ 8617   10               7114   7115u  7155u
+(....... UTE Tambaqui - 1 x Motor GE de 9.32 MVA    (ÓLEO)
+( 8615   20               7119    597u
+(....... UTE Tambaqui - 2 x Motores GE de 23.04 MVA (ÓLEO)
+( 8617   20               7121    598u
+(....... UTE Tambaqui - 2 x Motores GE de 23.04 MVA (ÓLEO)
+( 8615   30               7121    599u
+(....... UTE Cristiano Rocha
+ 8611   10               7111   7111u  7151u
+(....... UTE Veracel TG1 (PROVISORIAMENTE FORA DO CASO BASE - MODELAGEM PENDENTE DO CONTROLADOR)
+( 5978   10               4600
+(....... UTE Parnaíba IV
+ 5642   10               1317   1317u
+(....... UTE Maranhao III - Gas
+ 5646   10               1315   1315u         8375u
+(....... UTE Maranhao IV - Gas
+ 5647   10               4815   4815u         4875u
+(....... UTE Maranhao V - Gas
+ 5648   10               4816   4816u         4876u
+(....... UTE Nova Venecia II
+ 5650   10               4817   4817u         4877u
+(....... UTE Maranhao III - Vapor
+ 5815   10               1316   1316u         8376u
+(....... UTE Parnaiba V - Vapor
+ 8159   10               7100   7100u         7170u
+(....... UTE Klabin Celulose - Klacel - TG1 e TG2
+ 9986   10               7310   7310u         7370u
+ 9986   20               7311   7311u         7371u
+(....... UTE PUMA II - TG3
+10363   10               7312   7312u         7372u
+(....... UTE Candiota III
+ 1173   10               5500   5500u         5570u
+(....... UTE Ponta Negra
+ 8610   10               7110   7110u  7150u
+(....... UTE Norte Fluminense
+ 3962   10               2000   2000u  2040u  2070u
+ 3963   10               2001   2001u         2071u
+(....... UTE LORM - Luiz Oscar Rodrigues de Melo - existente
+ 9026   10               5111   5111u
+(
+(....... UTE LORM - Luiz Oscar Rodrigues de Melo - expansao
+45986   10               5112   5112u
+(
+(....... UTE Povoacao - Grupo 1 e Grupo 2
+45988   10               5115   5115u
+45987   10               5115   5116u
+(....... UTN Angra 1 e 2
+   10   10                100    100u   140u   170u
+   11   10                101    101u   141u   171u
+(....... UTE Amandina
+ 9682   10               5204   5204u
+(....... UTE Aparecida - Bloco I (UG07e08)(8646); Bloco II (UG09e10)(8653)
+ 8646   10               7101   7101u  7141u
+ 8653   10               7102   7102u  7142u
+(....... UTE Maracanau I
+ 5460   10               7802   7802u
+(....... UTE Santa Cruz (TG1 e TG2)(32) e (TV1)(46091)
+   32   10                132    132u   161u   172u
+46019   10                133    133u
+(....... UTE Jorge Lacerda - A1-2 (907); A3-4 (909); B5-6(911) E C(913)
+  907   10                800    800u   840u   870u
+  909   10                801    801u   841u
+  911   10                802    802u   842u   872u
+  913   10                803    803u   843u   873u
+(....... UTE Karkey 13: 12 X Motores + 1 X Turbogerador
+45065   10               7200   7220u
+45066   10               7200   7221u
+45066   20               7201   7222u
+(
+(....... UTE Karkey 19: 6 X Motores + 1 X Turbogerador
+45067   10               7202   7223u
+45068   10               7202   7224u
+45068   20               7203   7225u
+(
+(....... UTE Porsud I: 6 X Motores + 1 X Turbogerador
+45069   10               7204   7226u
+45070   10               7204   7227u
+45071   10               7204   7228u
+45071   20               7205   7229u
+(
+(....... UTE Porsud II: 4 X Motores + 1 X Turbogerador
+45072   10               7206   7230u
+45072   20               7207   7231u
+(
+(
+( |-----------------------------------------------------------------------------------------------------------|
+( |  CS                                                                                                       |
+( |-----------------------------------------------------------------------------------------------------------|
+(
+( Nb)   Gr (P) (Q) Uni ( Mg ) ( Mt )u( Mv )u( Me )u(Xvd)(Nbc)
+(....... CS Bom Jesus da Lapa
+ 6350   10               1237   1237u
+(....... CS Irece
+ 6347   10               1238   1238u
+(....... CS BARRA II
+44948   10                667    667u
+(....... CS SAO JOAO DO PARAISO
+44942   10                668    668u
+(....... CS Imperatriz - CS1 (5596); CS2 (44075); CS3 (44077)
+ 5596   10               1310   1310u
+44075   10               1310   1318u
+44077   10               1310   1319u
+(....... CS Presidente Dutra
+ 5586   10               1308   1308u
+44074   10               1308   1309u
+(....... CS Tapajos
+ 6537   10               6905   6905u
+(....... CS Ibiuna - com controle conjunto
+   48   10                127    127u
+(....... CS Ibiuna - sem controle conjunto
+(  48   10                127    124u                      86
+(....... CS Vila do Conde
+ 6465   10               1306   1306u
+(....... CS Tijuco Preto
+   50   10                125    125u
+(....... CS ESTREITO
+ 7885   10                663    663u
+(....... CS Feijo
+44763   10                661    661u
+44764   10                661    662u
+(....... CS MEDEIROS NETO
+ 7999   10                664    664u
+(....... CS Cachimbo
+45252   10                665    665u
+(....... CS Santo Angelo
+  533   10                533    526u
+(....... CS Vitoria 1 e 2
+   47   10                121    121u
+   41   10                121    123u
+(....... CS Janaúba 3
+ 4376   10               6910   6910u
+(....... CS Neves
+  354   10                309    309u
+  355   10                309    310u
+(....... CS Ariquemes
+ 6970   10               6906   6906u
+(....... CS SILVANIA
+45856   10               6921   6921u
+(....... CS Mesquita
+  346   10                308    308u
+(....... CS Tucuma
+44762   10                660    660u
+(....... CS Novo Progresso
+45253   10                666    666u
+(....... CS GRACA ARANHA
+45857   10               6920   6920u
+(....... CS Livramento 3 - CS01 (TAESA) e CS02 (NEOENERGIA)
+ 2085   10               6908   6908u
+10484   10               6911   6911u
+(....... CS Camaçari
+ 5778   10               1234   1234u
+(....... CS Ruropolis
+ 6552   10               6902   6902u
+(....... CS CRATEUS
+45017   10                669    669u
+(....... CS Grajau - sem controle conjunto
+(  44   10                126    122u                     178
+(  38   10                126    129u                     178
+(....... CS Grajau
+   44   10                126    126u
+   38   10                126    130u
+(....... CS Maraba
+ 6405   10               1307   1307u
+(....... CS Araraquara II
+  402   10               6903   6903u
+(....... CS Marmeleiro II - CS1 e CS2 (ELETROSUL)
+ 9824   10               1018   1018u
+(....... CS Marmeleiro II - CS3 (NEOENERGIA)
+10322   10               1019   1019u
+(....... CS Teresina
+ 5509   10               1233   1233u
+(....... CS Recife II - Siemens (5145); Alstom (5147)
+ 5145   10               1231   1231u
+ 5147   10               1232   1232u
+(....... CS Ji-Parana
+ 6885   10               6907   6907u
+(....... CS Terminal Rio
+ 9504   10               6904   6904u
+(....... CS Embu-Guacu
+  532   10                532    525u
+999999
