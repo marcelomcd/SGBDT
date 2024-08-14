@@ -1,116 +1,159 @@
 import pandas as pd
-import os
+from datetime import datetime
 import tkinter as tk
 from tkinter import filedialog
-from datetime import datetime
-
-# Definir os nomes das colunas, suas posições e seus limites de caracteres
-colunas_e_posicoes = [
-    ("No", (0, 7), 4),
-    ("CS", (7, 12), 4),
-    ("Xd", (12, 17), 4),
-    ("Xq", (17, 23), 4),
-    ("X'd", (23, 27), 4),
-    ("X'q", (27, 32), 4),
-    ('X"d', (32, 37), 4),
-    ("Xl", (37, 42), 4),
-    ("T'd", (42, 47), 4),
-    ("T'q", (47, 52), 4),
-    ('T"d', (52, 57), 4),
-    ('T"q', (57, 62), 4),
-]
-
-# Separar colunas, posições e limites
-colunas, posicoes, limites_de_caracteres = zip(*colunas_e_posicoes)
+from numpy import nan
 
 
-def processar_valor(coluna, valor):
-    return valor.strip()
+# Função para ler e formatar dados do arquivo
+def ler_e_formatar_dados(caminho_arquivo):
+    # Abrir o arquivo e ler todas as linhas
+    with open(caminho_arquivo, "r", encoding="latin-1") as arquivo:
+        linhas = arquivo.readlines()
 
+    # Inicializar listas para armazenar dados
+    dados_1 = []
+    dados_2 = []
+    dados_3 = []
 
-def ler_arquivo_largura_fixa(
-    caminho_arquivo, posicoes, limites_de_caracteres, codificacao
-):
-    dados = []
-    iniciar_processamento = False
-    with open(caminho_arquivo, "r", encoding=codificacao) as arquivo:
-        for linha in arquivo:
-            if not iniciar_processamento:
-                if linha.strip().startswith("(No)"):
-                    iniciar_processamento = True
-                continue
-            linha_processada = []
-            for (inicio, fim), limite, coluna in zip(
-                posicoes, limites_de_caracteres, colunas
-            ):
-                valor = linha[inicio:fim].strip()
-                if limite and len(valor) > limite:
-                    valor = valor[:limite]
-                valor = processar_valor(coluna, valor)
-                linha_processada.append(valor)
-            dados.append(linha_processada)
-    return pd.DataFrame(dados, columns=colunas)
+    # Definir colunas e posições para o primeiro conjunto de dados
+    colunas_e_posicoes_1 = [
+        ("Mg", (0, 7), 5, int),
+        ("CS", (7, 12), 5, int),
+        ("Xd", (12, 17), 5, float),
+        ("Xq", (17, 22), 5, float),
+        ("X'd", (22, 27), 5, float),
+        ("X'q", (27, 32), 5, float),
+        ('X"d', (32, 37), 5, float),
+        ("Xl", (37, 42), 5, float),
+        ("T'd", (42, 47), 5, float),
+        ("T'q", (47, 52), 5, float),
+        ('T"d', (52, 57), 5, float),
+        ('T"q', (57, 62), 5, float),
+    ]
 
+    # Definir colunas e posições para o segundo conjunto de dados
+    colunas_e_posicoes_2 = [
+        ("Mg", (0, 7), 5, int),
+        ("Ra", (7, 12), 5, float),
+        ("H", (12, 17), 5, float),
+        ("D", (17, 22), 5, float),
+        ("MVA", (22, 27), 5, float),
+        ("Fr", (27, 29), 5, int),
+        ("C", (29, 31), 5, str),
+    ]
 
-def converter_arquivo(arquivo_entrada):
-    # Detectar a extensão do arquivo
-    _, extensao_arquivo = os.path.splitext(arquivo_entrada)
+    # Definir colunas e posições para o terceiro conjunto de dados
+    colunas_e_posicoes_3 = [
+        ("CS", (0, 7), 5, int),
+        ("T", (7, 9), 3, int),
+        ("Y1", (9, 18), 8, float),
+        ("Y2", (18, 27), 8, float),
+        ("X1", (27, 36), 8, float),
+    ]
 
-    if extensao_arquivo.lower() != ".blt":
-        raise ValueError("Somente arquivos .BLT são suportados")
+    # Função para extrair colunas de uma linha
+    def extrair_colunas(linha, colunas, flag=2):
+        extraido = {}
+        for nome_coluna, (inicio, fim), largura, tipo in colunas:
+            extraido[nome_coluna] = linha[inicio:fim].strip()
+            try:
+                extraido[nome_coluna] = tipo(linha[inicio:fim].strip())
+            except ValueError:
+                extraido[nome_coluna] = ""
 
-    # Ler o arquivo com base na sua extensão
-    codificacoes = ["utf-8", "latin1", "ISO-8859-1"]
-    for codificacao in codificacoes:
-        try:
-            dados = ler_arquivo_largura_fixa(
-                arquivo_entrada, posicoes, limites_de_caracteres, codificacao
-            )
-            break
-        except UnicodeDecodeError:
+        return extraido
+
+    modo = None
+
+    # Processar cada linha do arquivo
+    for linha in linhas:
+        if linha.startswith("DMDG MD03") or linha.startswith("DMDG MD02"):
+            modo = "dados_1"
             continue
-    else:
-        raise ValueError(
-            f"Não foi possível decodificar o arquivo com as codificações disponíveis: {codificacoes}"
-        )
+        elif linha.startswith("DCST"):
+            modo = "dados_3"
+            continue
+        elif linha.startswith("999999") or linha.startswith("FIM"):
+            continue
 
-    # Criar o nome do arquivo de saída com data e hora
-    nome_base = os.path.basename(arquivo_entrada).rsplit(".", 1)[0]
-    timestamp = datetime.now().strftime("%d-%m-%y_%H-%M")
-    nome_saida = f"{nome_base}_{timestamp}.xlsx"
+        if modo == "dados_1":
+            if linha.strip() == "" or linha.strip().startswith("("):
+                continue
+            if "  " in linha:
+                if linha.strip().endswith("N"):  # Verifica se a linha termina com "N"
+                    dados_2.append(extrair_colunas(linha, colunas_e_posicoes_2, flag=1))
+                else:  # Primeiro conjunto de colunas
+                    dados_1.append(extrair_colunas(linha, colunas_e_posicoes_1))
 
-    # Selecionar o diretório de saída
-    diretorio_saida = filedialog.askdirectory(title="Selecione o diretório de saída")
-    if not diretorio_saida:
-        print("Nenhum diretório de saída selecionado")
-        return
+        elif modo == "dados_3":
+            if linha.strip() == "" or linha.strip().startswith("("):
+                continue
+            dados_3.append(extrair_colunas(linha, colunas_e_posicoes_3))
 
-    # Definir o caminho completo do arquivo de saída
-    caminho_saida = os.path.join(diretorio_saida, nome_saida)
+    # Criar dataframes a partir dos dados extraídos
+    df1 = pd.DataFrame(dados_1)
+    df2 = pd.DataFrame(dados_2)
+    df3 = pd.DataFrame(dados_3)
 
-    # Salvar o arquivo como XLSX
-    dados.to_excel(caminho_saida, index=False)
-
-    print(f"Arquivo salvo como {caminho_saida}")
-
-
-def principal():
-    # Criar uma janela raiz do Tkinter
-    root = tk.Tk()
-    root.withdraw()  # Ocultar a janela raiz
-
-    # Selecionar o arquivo de entrada
-    arquivo_entrada = filedialog.askopenfilename(
-        title="Selecione o arquivo de entrada",
-        filetypes=(("Arquivos BLT", "*.blt"),),
-    )
-    if not arquivo_entrada:
-        print("Nenhum arquivo selecionado")
-        return
-
-    # Converter o arquivo
-    converter_arquivo(arquivo_entrada)
+    return df1, df2, df3
 
 
-if __name__ == "__main__":
-    principal()
+# Função para mesclar os dataframes
+def mesclar_dataframes(df1, df2, df3):
+    # Mesclar os dataframes na coluna 'No'
+    df_mesclado = pd.merge(df1, df2, on="Mg", how="left", suffixes=("_df1", "_df2"))
+    df_mesclado = pd.merge(df_mesclado, df3, on="CS", how="left")
+
+    # Reordenar colunas para corresponder ao formato necessário
+    ordem_colunas = [
+        "Mg",
+        "CS",
+        "Xd",
+        "Xq",
+        "X'd",
+        "X'q",
+        'X"d',
+        "Xl",
+        "T'd",
+        "T'q",
+        'T"d',
+        'T"q',
+        "Ra",
+        "H",
+        "D",
+        "MVA",
+        "Fr",
+        "C",
+        "T",
+        "Y1",
+        "Y2",
+        "X1",
+    ]
+
+    df_mesclado = df_mesclado[ordem_colunas]
+    return df_mesclado
+
+
+# Função para salvar o dataframe mesclado em um arquivo Excel
+def salvar_para_excel(df_mesclado, caminho_saida):
+    with pd.ExcelWriter(caminho_saida) as escritor:
+        df_mesclado.to_excel(escritor, sheet_name="DMDG.blt (Completo)", index=False)
+
+
+def readDMDG(caminho_arquivo):
+    # Processar dados
+    df1, df2, df3 = ler_e_formatar_dados(caminho_arquivo)
+
+    # Verificações adicionais para garantir que os dados foram lidos corretamente
+    if df1.empty:
+        print("Aviso: df1 está vazio!")
+    if df2.empty:
+        print("Aviso: df2 está vazio!")
+    if df3.empty:
+        print("Aviso: df3 está vazio!")
+
+    # Mesclar os dataframes
+    df_mesclado = mesclar_dataframes(df1, df2, df3)
+
+    return df_mesclado

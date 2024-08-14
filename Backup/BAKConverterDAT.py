@@ -108,7 +108,7 @@ def converter_arquivo(arquivo_entrada):
     caminho_saida = os.path.join(diretorio_saida, nome_saida)
 
     # Salvar o arquivo como XLSX
-    dados.to_excel(caminho_saida, index=False)
+    dados.to_excel(caminho_saida, sheet_name="BNT1.dat", index=False)
 
     print(f"Arquivo salvo como {caminho_saida}")
 
